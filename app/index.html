@@ -17,8 +17,9 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!--
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css">
+    -->
     <link rel="stylesheet" href="styles/main.css">
 
 
@@ -45,16 +46,20 @@
         <h3>playerplaces</h3>
       </div>
 
-      <div class="jumbotron">
-        <h1>[playerplaces Visualization]</h1>
-        <p class="lead">iframe or map goes here</p>
+      <iframe width="100%" height="520" frameborder="0" src="https://baseball-hack.cartodb.com/viz/4380d8dc-ee10-11e5-bf98-0ecd1babdde5/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+<!--
+      <div id="map">
+        
       </div>
+-->
 
       <div class="row marketing">
         <div class="col-lg-6">
           <a NAME="howto"></a>
           <h4>how to use playerplaces</h4>
-          <p>///Instructions here///</p>
+           <p>Use the Birth Places Over Time map to see where players came from over time.  Use the All Player Birth Places map to zoom to a city and see who was born there.</p>
+          <p>To see the data behind the map, click the <a href="datatable.html">data</a> link.</p>
 
           <a NAME="about"></a>
           <h4>about playerplaces</h4>
@@ -134,6 +139,7 @@
        <script src="scripts/app.js"></script>
 
     <script src="scripts/main.js"></script>
+
     <!-- endbuild -->
   </body>
 </html>
