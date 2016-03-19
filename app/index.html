@@ -17,8 +17,9 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!--
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css">
+    -->
     <link rel="stylesheet" href="styles/main.css">
 
 
@@ -44,10 +45,13 @@
         <h3>playerplaces</h3>
       </div>
 
-      <div class="jumbotron">
-        <h1>[playerplaces Visualization]</h1>
-        <p class="lead">iframe or map goes here</p>
+      <iframe width="100%" height="520" frameborder="0" src="https://baseball-hack.cartodb.com/viz/4380d8dc-ee10-11e5-bf98-0ecd1babdde5/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+<!--
+      <div id="map">
+        
       </div>
+-->
 
       <div class="row marketing">
         <div class="col-lg-6">
@@ -91,8 +95,11 @@
     <!-- build:js scripts/main.js -->
        <script src="scripts/jquery-2.2.2.min.js"></script>
        <script src="scripts/bootstrap.min.js"></script>
-
-    <script src="scripts/main.js"></script>
+       <!--
+       <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+       <script src='https://baseball-hack.cartodb.com/api/v2/viz/4380d8dc-ee10-11e5-bf98-0ecd1babdde5/viz.json'></script>
+       -->
+       <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>
