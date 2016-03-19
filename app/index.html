@@ -38,10 +38,10 @@
     <div class="container-fluid">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a href="#">home</a></li>
-          <li><a href="datatable.html">data</a></li>
-          <li><a href="#howto">how to</a></li>
-          <li><a href="#about">about</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#howto">How To</a></li>
+          <li><a href="#about">About</a></li>
+          <li><marquee direction="right" loop="40"><a href="playerdata_table.html">Awesome Table</a></marquee></li>
         </ul>
         <h3>playerplaces</h3>
       </div>
@@ -65,6 +65,39 @@
           <h4>about playerplaces</h4>
           <p>playerplaces is a visualization of where Major League Baseball players have been born over time.  With this tool, you can see trends in player birth places and the spread of baseball across the United States.  Data for playerplaces was drawn from <a href="http://www.seanlahman.com/baseball-archive/statistics/">Sean Lahman's Baseball Archive.</a></p>
         </div>
+      </div>
+
+      <div class="row marketing" ng-app="sortApp" ng-controller="mainController">
+        <div class="alert alert-info">
+          <p>Sort Type: {{ sortType }} {{ 25 * 4}}</p>
+          <p>Sort Reverse: {{ sortReverse }}</p>
+          <p>Search Query: {{ searchFish }}</p>
+        </div>
+        <table class="table table-bordered table-striped">
+    
+          <thead>
+            <tr>
+              <td>
+                Birth year
+              </td>
+              <td>
+                Birth city
+              </td>
+              <td>
+                Birth state
+              </td>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr ng-repeat="player in player_data">
+              <td>{{ player.birthYear }}</td>
+              <td>{{ player.birthCity }}</td>
+              <td>{{ player.birthState }}</td>
+            </tr>
+          </tbody>
+          
+        </table>
       </div>
 
       <div class="footer">
@@ -97,11 +130,16 @@
     <!-- build:js scripts/main.js -->
        <script src="scripts/jquery-2.2.2.min.js"></script>
        <script src="scripts/bootstrap.min.js"></script>
-       <!--
-       <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
-       <script src='https://baseball-hack.cartodb.com/api/v2/viz/4380d8dc-ee10-11e5-bf98-0ecd1babdde5/viz.json'></script>
-       -->
-       <script src="scripts/main.js"></script>
+       <script src="scripts/angular.min.js"></script>
+       <script src="data/playerdata.js"></script>
+       <script type="text/javascript">
+        window.player_data = playerdata;
+
+       </script>
+       <script src="scripts/app.js"></script>
+
+    <script src="scripts/main.js"></script>
+
     <!-- endbuild -->
   </body>
 </html>

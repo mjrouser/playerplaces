@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>playerplaces</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles/main.css">
+
+
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container">
+      <img src="images/bwplayers.jpg" class="img-responsive">
+    </div>
+
+    <div class="container-fluid">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#howto">How To</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="playerdata_table.html">Awesome Table</a></li>
+        </ul>
+        <h3>playerplaces</h3>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4" ng-app="sortApp" ng-controller="mainController" ng-cloak>
+          <div class="alert alert-info">
+            <!-- <p>Sort Type: {{ sortType }} {{ 25 * 4}}</p>
+            <p>Sort Reverse: {{ sortReverse }}</p> -->
+            <p>Search Query: {{ player_last_name }}</p>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-search"></i></div>
+
+                <input type="text" class="form-control" placeholder="Search your favorite player!" ng-model="player_last_name">
+
+              </div>      
+            </div>
+          </form>
+
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <td>
+                 #
+                </td>
+                <td>
+                  First Name
+                </td>
+                <td>
+                  Last Name
+                </td>
+                <td>
+                  Birth year
+                </td>
+                <td>
+                  Height (in inches)
+                </td>
+                <td>
+                  Weight (in pounds)
+                </td>
+                <td>
+                  Birth City
+                </td>
+                <td>
+                  Birth State
+                </td>
+                <td>
+                  MLB Debut
+                </td>
+                <td>
+                  MLB Final Game
+                </td>
+              </tr>
+            </thead>
+            <!-- {"nameFirst": "Danny", "weight": "160", "birthState": "PA", "debut": "1932-09-18", "height": "69", "birthYear": "1905", "birthCity": "Zion", "baseball_ref_url": "http://www.baseball-reference.com/players/m/musseda01.shtml", "finalGame": "1932-09-18", "nameLast": "Musser"}]; -->
+            <tbody>
+              <tr ng-repeat="player in player_data  | orderBy:sortType:sortReverse | filter:player_last_name">
+                <td>{{ $index }}</td>
+                <td>{{ player.nameFirst }}</td>
+                <td>{{ player.nameLast }}</td>
+                <td>{{ player.birthYear }}</td>
+                <td>{{ player.height }}</td>
+                <td>{{ player.weight }}</td>
+                <td>{{ player.birthCity }}</td>
+                <td>{{ player.birthState }}</td>
+                <td>{{ player.debut }}</td>
+                <td>{{ player.finalGame }}</td>
+
+
+              </tr>
+            </tbody>    
+          </table>
+        </div>
+      </div>
+
+
+      <div class="footer">
+        <p>Produced at Boston Baseball Hack Day 2016</p>
+        <p><a href="https://twitter.com/BaseballHackDay" class="twitter-follow-button" data-show-count="false">@BaseballHackDay</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+      </div>
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+
+
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+       <script src="scripts/jquery-2.2.2.min.js"></script>
+       <script src="scripts/bootstrap.min.js"></script>
+       <script src="scripts/angular.min.js"></script>
+       <script src="data/players.js"></script>
+       <script type="text/javascript">
+        window.player_data = players;
+
+       </script>
+       <script src="scripts/app.js"></script>
+
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
