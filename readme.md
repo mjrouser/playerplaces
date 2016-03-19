@@ -6,4 +6,6 @@
 
 3. Cd/ to the repo
 
-4. Run 'gulp serve'
+4. Run 'npm install'
+
+5. Run 'gulp serve'
