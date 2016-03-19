@@ -16,4 +16,4 @@
 
 Historical baseball player data from Sean Lahman's "Lehman Baseball Database": http://seanlahman.com/baseball-archive/statistics/
 
-City, state geocoding data provided by Open Geocode: http://www.opengeocode.org/
+City, state geocoding data provided by Open Geocode: http://www.opengeocode.org/download.php#cityzip
