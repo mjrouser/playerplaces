@@ -57,6 +57,39 @@
         </div>
       </div>
 
+      <div class="row marketing" ng-app="sortApp" ng-controller="mainController">
+        <div class="alert alert-info">
+          <p>Sort Type: {{ sortType }} {{ 25 * 4}}</p>
+          <p>Sort Reverse: {{ sortReverse }}</p>
+          <p>Search Query: {{ searchFish }}</p>
+        </div>
+        <table class="table table-bordered table-striped">
+    
+          <thead>
+            <tr>
+              <td>
+                Birth year
+              </td>
+              <td>
+                Birth city
+              </td>
+              <td>
+                Birth state
+              </td>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr ng-repeat="player in player_data">
+              <td>{{ player.birthYear }}</td>
+              <td>{{ player.birthCity }}</td>
+              <td>{{ player.birthState }}</td>
+            </tr>
+          </tbody>
+          
+        </table>
+      </div>
+
       <div class="footer">
         <p>Produced at Boston Baseball Hack Day 2016 <a href="https://twitter.com/BaseballHackDay" class="twitter-follow-button" data-show-count="false">@BaseballHackDay</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
@@ -87,6 +120,12 @@
        <script src="scripts/jquery-2.2.2.min.js"></script>
        <script src="scripts/bootstrap.min.js"></script>
        <script src="scripts/angular.min.js"></script>
+       <script src="data/playerdata.js"></script>
+       <script type="text/javascript">
+        window.player_data = playerdata;
+
+       </script>
+       <script src="scripts/app.js"></script>
 
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
