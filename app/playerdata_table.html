@@ -52,7 +52,7 @@
           <div class="alert alert-info">
             <!-- <p>Sort Type: {{ sortType }} {{ 25 * 4}}</p>
             <p>Sort Reverse: {{ sortReverse }}</p> -->
-            <p>Search Query: {{ searchPlayer }}</p>
+            <p>Search Query: {{ player_last_name }}</p>
           </div>
 
           <form>
@@ -60,7 +60,7 @@
               <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-search"></i></div>
 
-                <input type="text" class="form-control" placeholder="Search your favorite player!" ng-model="searchPlayer">
+                <input type="text" class="form-control" placeholder="Search your favorite player!" ng-model="player_last_name">
 
               </div>      
             </div>
@@ -103,7 +103,7 @@
             </thead>
             <!-- {"nameFirst": "Danny", "weight": "160", "birthState": "PA", "debut": "1932-09-18", "height": "69", "birthYear": "1905", "birthCity": "Zion", "baseball_ref_url": "http://www.baseball-reference.com/players/m/musseda01.shtml", "finalGame": "1932-09-18", "nameLast": "Musser"}]; -->
             <tbody>
-              <tr ng-repeat="player in player_data  | orderBy:sortType:sortReverse | filter:searchPlayer">
+              <tr ng-repeat="player in player_data  | orderBy:sortType:sortReverse | filter:player_last_name">
                 <td>{{ $index }}</td>
                 <td>{{ player.nameFirst }}</td>
                 <td>{{ player.nameLast }}</td>
