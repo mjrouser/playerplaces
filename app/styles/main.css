@@ -19,6 +19,7 @@ body {
   padding-right: 15px;
 }
 
+
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
@@ -34,6 +35,7 @@ body {
 
 /* Custom page footer */
 .footer {
+  text-align: center;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
@@ -63,6 +65,9 @@ body {
   margin-top: 28px;
 }
 
+.marketing h4 {
+  font-size: 32px;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -86,4 +91,5 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+
 }
