@@ -19,21 +19,28 @@ body {
   padding-right: 15px;
 }
 
+
 /* Custom page header */
 .header {
+  font-size: 32px;
   border-bottom: 1px solid #e5e5e5;
 }
 
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
+  padding-top: 24px;
+  font-size: 64px;
+  color: #cc0000;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
   padding-bottom: 19px;
 }
 
+
 /* Custom page footer */
 .footer {
+  text-align: center;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
@@ -63,6 +70,10 @@ body {
   margin-top: 28px;
 }
 
+.marketing h4 {
+  padding-top: 40px;
+  font-size: 32px;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -86,4 +97,5 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+
 }
