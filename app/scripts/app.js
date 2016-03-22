@@ -22,7 +22,7 @@ angular.module('sortApp', [
         redirectTo: '/'
       });
   })
-.controller('MainCtrl', function($scope, $location, $anchorScroll){
+.controller('MainCtrl', function($scope){
   /*
     console.log('something fired');
         $scope.gotoAbout = function() {
