@@ -5,7 +5,6 @@
 
 angular.module('sortApp', [
         'ngRoute',
-        'ngAnimate',
         'ngMessages',
         'angular.filter'
 	])
@@ -24,6 +23,7 @@ angular.module('sortApp', [
       });
   })
 .controller('MainCtrl', function($scope, $location, $anchorScroll){
+  /*
     console.log('something fired');
         $scope.gotoAbout = function() {
       // set the location.hash to the id of
@@ -40,7 +40,7 @@ angular.module('sortApp', [
       // call $anchorScroll()
       $anchorScroll();
     };
-
+*/
 })
 .controller('TableCtrl', function($scope, $http) {
   
