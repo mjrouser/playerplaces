@@ -1,6 +1,6 @@
- 
+ <div class="container">
       <div class="row">
-        <div class="col-sm-4" ng-app="sortApp" ng-controller="mainController" ng-cloak>
+        <div class="col-sm-4" ng-app="sortApp" ng-controller="TableCtrl" ng-cloak>
           <div class="alert alert-info">
             <!-- <p>Sort Type: {{ sortType }} {{ 25 * 4}}</p>
             <p>Sort Reverse: {{ sortReverse }}</p> -->
@@ -10,7 +10,7 @@
           <form>
             <div class="form-group">
               <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
 
                 <input type="text" class="form-control" placeholder="Search your favorite player!" ng-model="player_last_name">
 
@@ -73,3 +73,4 @@
           </table>
         </div>
       </div>
+</div>

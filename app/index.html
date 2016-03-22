@@ -41,13 +41,14 @@
     <div class="container-fluid">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#howto">How To</a></li>
-          <li><a href="#about">About</a></li>
-          <li><marquee direction="right" loop="40"><a href="playerdata_table.html">Awesome Table</a></marquee></li>
+          <li><a href="#/">Home</a></li>
+          <li><a ng-click="scrollTo('howTo')">How To</a></li>
+          <li><a ng-click="scrollTo('about')">About</a></li>
+          <li><marquee direction="right" loop="40"><a href="#/table">Awesome Table</a></marquee></li>
         </ul>
         <h3>playerplaces</h3>
       </div>
+     </div>
       <div ng-view=""></div>
       
 
@@ -56,17 +57,18 @@
         
       </div>
 -->
-
+<div class="container-fluid">
       <div class="row marketing">
-        <div class="col-lg-6">
-          <a NAME="howto"></a>
+        <div class="col-lg-6" >
+         <div id="howTo">
           <h4>how to use playerplaces</h4>
            <p>Use the Birth Places Over Time map to see where players came from over time.  Use the All Player Birth Places map to zoom to a city and see who was born there.</p>
           <p>To see the data behind the map, click the <a href="datatable.html">data</a> link.</p>
-
-          <a NAME="about"></a>
+         </div>
+         <div id="about">
           <h4>about playerplaces</h4>
           <p>playerplaces is a visualization of where Major League Baseball players have been born over time.  With this tool, you can see trends in player birth places and the spread of baseball across the United States.  Data for playerplaces was drawn from <a href="http://www.seanlahman.com/baseball-archive/statistics/">Sean Lahman's Baseball Archive.</a></p>
+          </div>
         </div>
       </div>
 
@@ -75,7 +77,7 @@
         <p><a href="https://twitter.com/BaseballHackDay" class="twitter-follow-button" data-show-count="false">@BaseballHackDay</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
       </div>
-    </div>
+</div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
