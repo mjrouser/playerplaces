@@ -1,14 +1,26 @@
 #playerplaces
 
+### To Run/Develop the app
+
 1. Clone the repo
 
 2. Make sure you have npm, bower and gulp installed globally
 
 3. Cd/ to the repo
 
-4. Run 'npm install'
+4. Run `npm install`
 
-5. Run 'gulp serve'
+5. Run `bower install`
+
+5. Run `gulp serve`
+
+### To deploy to gh-pages
+
+1. Commit chages to `master`
+
+2. Run `gulp`
+
+3. Run `gulp deploy`
 
 
 
