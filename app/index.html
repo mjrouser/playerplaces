@@ -42,8 +42,7 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li><a href="#/">Home</a></li>
-          <li><a ng-click="scrollTo('howTo')">How To</a></li>
-          <li><a ng-click="scrollTo('about')">About</a></li>
+
           <li><marquee direction="right" loop="40"><a href="#/table">Awesome Table</a></marquee></li>
         </ul>
         <h3>playerplaces</h3>
@@ -60,15 +59,16 @@
 <div class="container-fluid">
       <div class="row marketing">
         <div class="col-lg-6" >
-         <div id="howTo">
+        <a id="howTo"></a>
+         
           <h4>how to use playerplaces</h4>
            <p>Use the Birth Places Over Time map to see where players came from over time.  Use the All Player Birth Places map to zoom to a city and see who was born there.</p>
           <p>To see the data behind the map, click the <a href="datatable.html">data</a> link.</p>
-         </div>
-         <div id="about">
+         
+         <a id="about"></a>
           <h4>about playerplaces</h4>
           <p>playerplaces is a visualization of where Major League Baseball players have been born over time.  With this tool, you can see trends in player birth places and the spread of baseball across the United States.  Data for playerplaces was drawn from <a href="http://www.seanlahman.com/baseball-archive/statistics/">Sean Lahman's Baseball Archive.</a></p>
-          </div>
+          
         </div>
       </div>
 
@@ -93,12 +93,13 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/cartodb.js/cartodb.js"></script>
+    <script src="/bower_components/d3/d3.js"></script>
+    <script src="/bower_components/c3/c3.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/angular-filter/dist/angular-filter.min.js"></script>
     <script src="/bower_components/angular-messages/angular-messages.js"></script>
-    <script src="/bower_components/d3/d3.js"></script>
-    <script src="/bower_components/c3/c3.js"></script>
-    <script src="/bower_components/cartodb.js/cartodb.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

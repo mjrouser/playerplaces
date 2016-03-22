@@ -21,8 +21,24 @@ angular.module('sortApp', [
         redirectTo: '/'
       });
   })
-.controller('MainCtrl', function($scope){
+.controller('MainCtrl', function($scope, $location, $anchorScroll){
     console.log('something fired');
+        $scope.gotoAbout = function() {
+      // set the location.hash to the id of
+      // the element you wish to scroll to.
+      $location.hash('about');
+      // call $anchorScroll()
+      $anchorScroll();
+    };
+        $scope.gotoHowto = function() {
+      // set the location.hash to the id of
+      // the element you wish to scroll to.
+      $location.hash('howTo');
+
+      // call $anchorScroll()
+      $anchorScroll();
+    };
+
 })
 .controller('TableCtrl', function($scope, $http) {
   
