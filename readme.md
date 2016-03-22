@@ -14,7 +14,7 @@
 
 5. Run `gulp serve`
 
-### To deploy to gh-pages
+### To deploy to gh-pages (in development)
 
 1. Commit chages to `master`
 
