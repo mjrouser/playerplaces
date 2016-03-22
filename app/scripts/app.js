@@ -5,6 +5,8 @@
 
 angular.module('sortApp', [
         'ngRoute',
+        'ngAnimate',
+        'ngMessages',
         'angular.filter'
 	])
   .config(function ($routeProvider) {
