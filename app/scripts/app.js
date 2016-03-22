@@ -3,14 +3,25 @@
 // app.js
 'use strict';
 
-angular.module('sortApp', [])
+angular
+.module('sortApp', [
+        'ngRoute',
+        'ngMessages',
+        'angular.filter'
+	])
+  .config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/map.html',
+        controller: 'MainCtrl'
+      })
+      .when('/table', {
+        templateUrl: 'views/table.html',
+        controller: 'TableCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  });
 
-.controller('mainController', function($scope) {
-  $scope.sortType = 'name'; // set the default sort type
-  $scope.sortReverse = false;  // set the default sort order
-  $scope.searchPlayer = '';     // set the default search/filter term
 
-  // create the list of sushi rolls
-  $scope.player_data = window.player_data;
-
-});
