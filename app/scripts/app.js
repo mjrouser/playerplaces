@@ -3,7 +3,8 @@
 // app.js
 'use strict';
 
-angular.module('sortApp', [
+angular
+.module('sortApp', [
         'ngRoute',
         'ngMessages',
         'angular.filter'
