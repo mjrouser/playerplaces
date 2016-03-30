@@ -5,7 +5,7 @@ angular.module('sortApp')
   
   $scope.player_data = [];
 
-  $http.get('data/players.json')
+  $http.get('scripts/players.json')
        .then(function(res){
           $scope.player_data = res.data;                
         });
