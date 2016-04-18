@@ -1,8 +1,10 @@
 node_modules
 dist
 .tmp
+.publish
 .sass-cache
 bower_components
 test/bower_components
 .DS-Store
 app/scripts/.DS_Store
+app/data/.DS_Store
