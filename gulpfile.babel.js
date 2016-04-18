@@ -1,11 +1,15 @@
 // generated on 2016-03-19 using generator-webapp 2.0.0
+'use strict';
+
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+/*
 import ghPages from 'gulp-gh-pages';
 import ngAnnotate from 'gulp-ng-annotate';
+*/
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -50,7 +54,9 @@ gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 gulp.task('html', ['styles', 'scripts'], () => {
   return gulp.src('app/**/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    //.pipe($.if('*.js', $.uglify()))
+    //.pipe($.if('*.js', $.concat()))
+    .pipe($.if('*.js', $.ngAnnotate()))  
+    .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
@@ -82,6 +88,8 @@ gulp.task('extras', () => {
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
+  return gulp.src('app/scripts/*.json')
+  .pipe($.copy('dist/scripts'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
@@ -152,8 +160,10 @@ gulp.task('wiredep', () => {
 
 
 gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+    return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
+
+
 
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
