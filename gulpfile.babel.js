@@ -88,8 +88,11 @@ gulp.task('extras', () => {
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
-  return gulp.src('app/scripts/*.json')
-  .pipe($.copy('dist/scripts'));
+});
+
+gulp.task('json', () => {
+  return gulp.src('app/scripts/players.json')
+  .pipe(gulp.dest('dist/scripts'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
@@ -159,7 +162,7 @@ gulp.task('wiredep', () => {
 
 
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'fonts', 'extras', 'json'], () => {
     return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
